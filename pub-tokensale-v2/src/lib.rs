@@ -14,6 +14,7 @@ pub struct PubTokenSale {
 
 #[near_bindgen]
 impl PubTokenSale {
+    #[result_serializer(borsh)]
     pub fn new(native_token_account_id: AccountId) -> Self {
         Self {
             native_token_account_id,
